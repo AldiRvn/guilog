@@ -1,0 +1,13 @@
+@url = http://0.0.0.0:8082/
+
+GET {{url}}
+
+###
+
+POST {{url}}
+Accept: application/json
+Content-Type: application/json
+
+{
+    "message": "hi"
+}

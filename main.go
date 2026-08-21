@@ -11,8 +11,8 @@ import (
 	"github.com/logdyhq/logdy-core/logdy"
 )
 
-func main() {
-	appPort := "8080"
+func mainSelfOpenUi() {
+	appPort := "8082"
 
 	logdyLogger := logdy.InitializeLogdy(logdy.Config{
 		ServerIp:   "127.0.0.1",
@@ -20,6 +20,8 @@ func main() {
 	}, nil)
 
 	fmt.Println("log by fmt")
+	fmt.Println("logdy {\"type\":\"app:start\"}")
+	fmt.Println("log by fmt again")
 	log.Println("log by log")
 	slog.Info("log by slog")
 
