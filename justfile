@@ -14,4 +14,4 @@ p:
     tail -f main.log \
         | grep --line-buffered '^logdy ' \
         | sed -u 's/logdy //' \
-        | logdy
+        | logdy --config logdy.json

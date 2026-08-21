@@ -1,0 +1,77 @@
+{
+	"name": "main",
+	"columns": [
+		{
+			"id": "682338",
+			"name": "raw",
+			"handlerTsCode": "(line: Message): CellHandler => {\n          return { text: line.content || \"-\"}\n      }",
+			"idx": 0,
+			"width": 150,
+			"faceted": false,
+			"hidden": true
+		},
+		{
+			"id": "468631",
+			"name": "method",
+			"handlerTsCode": "(line: Message): CellHandler => {\n    return { text: line.json_content['method'] }\n}",
+			"idx": 1,
+			"width": 150
+		},
+		{
+			"id": "245678",
+			"name": "path",
+			"handlerTsCode": "(line: Message): CellHandler => {\n    return { text: line.json_content['path'] }\n}",
+			"idx": 2,
+			"width": 150
+		},
+		{
+			"id": "163093",
+			"name": "request_headers",
+			"handlerTsCode": "(line: Message): CellHandler => {\n    return { text: line.json_content['request_headers'] }\n}",
+			"idx": 3,
+			"width": 150
+		},
+		{
+			"id": "357910",
+			"name": "request_body",
+			"handlerTsCode": "(line: Message): CellHandler => {\n    return { text: line.json_content['request_body'] }\n}",
+			"idx": 4,
+			"width": 150
+		},
+		{
+			"id": "458995",
+			"name": "status",
+			"handlerTsCode": "(line: Message): CellHandler => {\n    return { text: line.json_content['status'] }\n}",
+			"idx": 5,
+			"width": 150
+		},
+		{
+			"id": "566761",
+			"name": "response_headers",
+			"handlerTsCode": "(line: Message): CellHandler => {\n    return { text: line.json_content['response_headers'] }\n}",
+			"idx": 6,
+			"width": 150
+		},
+		{
+			"id": "164932",
+			"name": "response_body",
+			"handlerTsCode": "(line: Message): CellHandler => {\n    return { text: line.json_content['response_body'] }\n}",
+			"idx": 7,
+			"width": 150
+		},
+		{
+			"id": "720677",
+			"name": "latency_ms",
+			"handlerTsCode": "(line: Message): CellHandler => {\n    return { text: line.json_content['latency_ms'] }\n}",
+			"idx": 8,
+			"width": 150
+		}
+	],
+	"settings": {
+		"leftColWidth": 300,
+		"drawerColWidth": 900,
+		"maxMessages": 1000,
+		"middlewares": [],
+		"entriesOrder": "desc"
+	}
+}
